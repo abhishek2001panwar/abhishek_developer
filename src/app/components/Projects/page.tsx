@@ -1,13 +1,11 @@
+"use client";
+
 import { HoverEffect } from "../ui/card-hover-effect";
 
-export default function Fep() {
-  return (
-    <div className=" mx-auto px-10">
-      <HoverEffect items={projects} />
-    </div>
-  );
-}
-export const projects = [
+// Type for each project in the array
+
+// Declare the 'projects' array with the 'Project' type
+const projects: { title: string; description: string; link: string }[]  = [
   {
     title: "HTML, CSS, JS",
     description:
@@ -57,3 +55,14 @@ export const projects = [
     link: "https://www.docker.com/",
   },
 ];
+
+// Default export of the page component
+export { projects };
+
+export default function Fep() {
+  return (
+    <div className="mx-auto px-10">
+      <HoverEffect items={projects} />
+    </div>
+  );
+}
