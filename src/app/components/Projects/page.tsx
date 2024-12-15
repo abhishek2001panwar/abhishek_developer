@@ -53,7 +53,7 @@ import { HoverEffect } from "../ui/card-hover-effect";
 
 export default function Fep() {
   return (
-    <div className=" mx-auto px-10">
+    <div className=" mx-auto px-10 mb-32">
       <HoverEffect items={projects} />
     </div>
   );

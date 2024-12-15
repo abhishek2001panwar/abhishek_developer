@@ -8,7 +8,6 @@ import Exp from './components/Exp/page'
 import InfiniteMovingCardsDemo from './components/Infinite/page'
 import Fep from './components/ProjectFeatured/page'
 import Projects from './components/Projects/page'
-import  Contact  from './components/Contact/page'
 import Footer from './components/Footer/page'
 import Navbar from './components/Navbar/page'
 
@@ -28,7 +27,7 @@ function page() {
     <Fep />
     <Projects />
     {/* <Carousels /> */}
-    <Contact />
+    {/* <Contact /> */}
     <Footer />
     
     </div>
