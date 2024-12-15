@@ -15,7 +15,6 @@ import Navbar from './components/Navbar/page'
 
 function page() {
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
   return (
     <div>
