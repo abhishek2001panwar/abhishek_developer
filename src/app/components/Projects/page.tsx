@@ -1,11 +1,6 @@
-"use client";
-
 import { HoverEffect } from "../ui/card-hover-effect";
 
-// Type for each project in the array
-
-// Declare the 'projects' array with the 'Project' type
-const projects: { title: string; description: string; link: string }[]  = [
+ const projects = [
   {
     title: "HTML, CSS, JS",
     description:
@@ -56,12 +51,9 @@ const projects: { title: string; description: string; link: string }[]  = [
   },
 ];
 
-// Default export of the page component
-export { projects };
-
 export default function Fep() {
   return (
-    <div className="mx-auto px-10">
+    <div className=" mx-auto px-10">
       <HoverEffect items={projects} />
     </div>
   );
