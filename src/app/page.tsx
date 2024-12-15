@@ -11,13 +11,11 @@ import Projects from './components/Projects/page'
 import  Contact  from './components/Contact/page'
 import Footer from './components/Footer/page'
 import Navbar from './components/Navbar/page'
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 function page() {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const scroll = new LocomotiveScroll()
 
   return (
     <div>
