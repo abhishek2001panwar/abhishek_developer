@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+
+/* ::-webkit-scrollbar-thumb{
+    background-color: #4B5563;
+    border-radius: 10px;
+    height: 5px;
+} */
+
+
+*{
+    font-family: "Gilroy" ;
+}

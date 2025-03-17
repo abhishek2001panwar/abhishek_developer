@@ -1,16 +1,32 @@
 // components/Button.tsx
 import React from 'react';
-import { useTheme } from '../hooks/useTheme';
 
-const Button: React.FC = () => {
-  const { isDark, toggleTheme } = useTheme();
+interface ButtonProps {
+  label: string;
+  className?: string;
+  variant?: 'primary' | 'secondary'; // Add variant prop for different styles
+}
+
+const Button: React.FC<ButtonProps> = ({ 
+  label, 
+  className = '', 
+  variant = 'primary',
+   
+}) => {
+  const baseStyles = variant === 'primary' 
+    ? 'bg-dark-accent text-primary-foreground dark:text-dark-background'
+    : 'border border-border bg-muted text-foreground';
+
+  const commonStyles = 'rounded font-normal transition';
+  const hoverStyles = variant === 'primary' 
+    ? 'hover:bg-primary/90'
+    : 'hover:bg-muted/80';
+
+  const combinedClassName = `${baseStyles} ${commonStyles} ${hoverStyles} ${className}`;
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
-    >
-      {isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+    <button className={combinedClassName}>
+      {label}
     </button>
   );
 };
