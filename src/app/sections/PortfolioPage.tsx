@@ -12,7 +12,7 @@ export default function PortfolioPage() {
         />
 
         <WebsiteShowcase
-          title="Expo Ape App"
+          title="Expo-Ape App"
           description="Global digital design studio crafting immersive brand experiences."
           imageUrl="/ExpoApe.png"
           technologies={[
