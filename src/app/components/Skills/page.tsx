@@ -1,11 +1,11 @@
 // Skills.tsx
 import React from 'react';
-import About from '../About';
+import Tools from '../Tools';
 
 const Skills: React.FC = () => {
   return (
     <>
-    <div className="container mx-auto max-w-6xl p-10">
+    <div className="container mx-auto max-w-6xl p-10 mt-20 ">
       <div className="text-4xl font-bold mb-16">My Skills & Services</div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
         <div>
@@ -37,7 +37,7 @@ const Skills: React.FC = () => {
         </div>
       </div>
     </div>
-    <About />
+    <Tools />
     </>
   );
 };

@@ -36,7 +36,7 @@ module.exports = {
         "light-primary": "#f4f4f5",
         "light-secondary": "#a1a1aa",
         "light-accent": "#ddf763",
-        "light-background": "#f8f8fa",
+        "light-background": "#ffffff",
         "light-foreground": "#0a0a0a",
         "light-muted": "#e5e5e5",
 
