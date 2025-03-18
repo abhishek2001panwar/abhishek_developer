@@ -27,7 +27,7 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
     switch (deviceView) {
       case 'mobile': return 'w-64';
       case 'tablet': return 'w-96';
-      case 'laptop': return 'w-3/4';
+      case 'laptop': return 'w-3/5';
       default: return 'w-full';
     }
   };
@@ -104,9 +104,9 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
         
         {/* Website Preview */}
         <div className="flex justify-center mb-8">
-          <div className={`${getDeviceWidth()} aspect-video object-cover relative overflow-hidden rounded-md border border-light-muted dark:border-dark-muted bg-white dark:bg-black`}>
+          <div className={`${getDeviceWidth()} aspect-video   relative overflow-hidden rounded-md border border-light-muted dark:border-dark-muted bg-white dark:bg-black`}>
             <Image
-            width={1920}
+            width={2000}
             height={1080} 
               src={imageUrl} 
               alt={`${title} preview`} 

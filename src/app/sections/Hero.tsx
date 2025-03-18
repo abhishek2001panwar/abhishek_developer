@@ -16,6 +16,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ name, title, description, stats }) => {
   return (
+    <>
     <section className="bg-background dark:bg-dark-background pt-40 md:pt-0 py-8 sm:py-12 md:py-20 lg:py-40">
       <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         {/* Badge */}
@@ -93,6 +94,60 @@ const Hero: React.FC<HeroProps> = ({ name, title, description, stats }) => {
         </div>
       </div>
     </section>
+    {/* Curved Line Connecting Hero to About */}
+    <div className="absolute md:left-[-1px] top-[200px] w-2 xl:w-[400px] h-[2900px] pointer-events-none">
+      <svg
+      className="absolute w-full h-full"
+      viewBox="0 130 100 1500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M20,0 L20,400 Q20,450 70,470"
+      stroke="url(#gradient)"
+      strokeWidth="1"
+      fill="transparent"
+      />
+      <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#4f46e5" />
+      <stop offset="100%" stopColor="#06b6d4" />
+      </linearGradient>
+      </defs>
+
+      {/* Start Dot */}
+      <circle cx="20" cy="135" r="5" fill="#06b6d4">
+      <animate
+      attributeName="r"
+      values="4;7;4"
+      dur="1.5s"
+     
+      />
+      </circle>
+
+      {/* Middle Dot */}
+      <circle cx="20" cy="120" r="5" fill="#06b6d4">
+      <animate
+      attributeName="r"
+      values="4;7;4"
+      dur="1.5s"
+     
+      />
+      </circle>
+
+      {/* End Dot */}
+      {/* <circle cx="70" cy="470" r="5" fill="#06b6d4">
+      <animate
+      attributeName="r"
+      values="4;7;4"
+      dur="1.5s"
+      repeatCount="indefinite"
+      />
+      </circle> */}
+      </svg>
+    </div>
+
+    </>
   );
 };
 

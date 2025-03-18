@@ -8,67 +8,67 @@ export default function Experience() {
       title: "2024",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-xl  font-normal mb-8">
-            <div className="p-6 bg-gray-100 text-gray-800 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-indigo-600 mb-4">
+          <p className="text-neutral-800 dark:text-neutral-200 bg-white/80 dark:bg-neutral-900/90 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 text-xs md:text-xl  rounded-md font-normal mb-8">
+            <div className="p-6 text-neutral-800 dark:text-neutral-200 bg-white/80 dark:bg-neutral-900 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 rounded-md ">
+              <h2 className="text-2xl font-medium text-dark-background dark:text-dark-foreground mb-4">
                 3-Month Internship (Sep 24 - Nov 24)
               </h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <span className="font-bold text-indigo-700">Project:</span>{" "}
+                  <span className="font-medium text-dark-background dark:text-dark-foreground">Project:</span>{" "}
                   Built and launched
-                  <span className="bg-yellow-200 font-bold">Connectify</span>, a{" "}
-                  <span className="font-bold">job portal platform</span>{" "}
+                  <span className=" font-medium ml-2">Connectify</span>, a{" "}
+                  <span className="font-medium">job portal platform</span>{" "}
                   connecting job seekers and employers.
                 </li>
                 <li>
-                  <span className="font-bold text-indigo-700">Tech Stack:</span>{" "}
+                  <span className="font-medium text-dark-background dark:text-dark-foreground">Tech Stack:</span>{" "}
                   Developed from scratch using
-                  <span className="bg-yellow-200 font-bold">
+                  <span className=" font-medium">
                     React.js
                   </span>,{" "}
-                  <span className="bg-yellow-200 font-bold">Node.js</span>, and
-                  <span className="bg-yellow-200 font-bold">MongoDB</span>.
+                  <span className=" font-medium">Node.js</span>, and
+                  <span className=" font-medium">MongoDB</span>.
                 </li>
                 <li>
-                  <span className="font-bold text-indigo-700">
+                  <span className="font-medium text-dark-background dark:text-dark-foreground">
                     Key Features:
                   </span>
                   <ul className="list-disc pl-6">
                     <li>
-                      <span className="font-bold">Secure authentication</span>
+                      <span className="font-medium">Secure authentication</span>
                     </li>
                     <li>
-                      <span className="font-bold">Job postings</span>
+                      <span className="font-medium">Job postings</span>
                     </li>
                     <li>
-                      <span className="font-bold">
+                      <span className="font-medium">
                         Advanced search functionality
                       </span>
                     </li>
                     <li>
-                      <span className="font-bold">Real-time notifications</span>
+                      <span className="font-medium">Real-time notifications</span>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <span className="font-bold text-indigo-700">Deployment:</span>{" "}
+                  <span className="font-medium text-dark-background dark:text-dark-foreground">Deployment:</span>{" "}
                   Deployed on{" "}
-                  <span className="bg-yellow-200 font-bold">AWS</span>.
+                  <span className=" font-medium">AWS</span>.
                 </li>
                 <li>
-                  <span className="font-bold text-indigo-700">
+                  <span className="font-medium text-dark-background dark:text-dark-foreground">
                     Achievements:
                   </span>{" "}
                   Received
-                  <span className="font-bold">positive feedback</span> for its
+                  <span className="font-medium">positive feedback</span> for its
                   user-friendly design and functionality.
                 </li>
                 <li>
-                  <span className="font-bold text-indigo-700">Outcome:</span>{" "}
+                  <span className="font-medium text-dark-background dark:text-dark-foreground">Outcome:</span>{" "}
                   Showcased my ability to deliver a
-                  <span className="bg-yellow-200 font-bold">
-                    complete, scalable product
+                   <span className=" font-medium ml-2">
+                     complete, scalable product
                   </span>{" "}
                   within a tight deadline.
                 </li>
@@ -112,13 +112,13 @@ export default function Experience() {
       title: "2024 - WebWeavers",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-800 p-2.5 dark:text-neutral-200 shadow-lg bg-white/80 dark:bg-neutral-900/90 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 text-xs md:text-sm font-normal rounded-md mb-4">
             I joined vWebWeavers as a Backend Developer and eventually grew into a Full-Stack Developer, leveraging my expertise in building efficient and scalable applications.
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-800 p-2.5 dark:text-neutral-200 shadow-lg bg-white/80 dark:bg-neutral-900/90 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 text-xs md:text-sm font-normal rounded-md mb-4">
             At vWebWeavers, I led a team of junior developers, designed and optimized backend systems, and implemented RESTful APIs with Node.js and Express.js. These contributions enhanced project efficiency by 20% and streamlined interactions between frontend and backend components, significantly improving the user experience.
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-800 p-2.5 dark:text-neutral-200 shadow-lg bg-white/80 dark:bg-neutral-900/90 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 text-xs md:text-sm font-normal rounded-md mb-4">
             I also integrated MongoDB for effective data management and conducted workshops on innovative technologies, fostering skill development within the team. These efforts resulted in the delivery of high-performance, scalable server-side solutions.
           </p>
           <div className="grid grid-cols-2 gap-4">

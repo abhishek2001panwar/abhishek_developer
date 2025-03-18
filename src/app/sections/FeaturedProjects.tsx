@@ -40,7 +40,7 @@ const FeaturedProjects: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto max-w-6xl p-3 md:p-16">
+    <div className="container mx-auto max-w-7xl p-3 md:p-16">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 space-y-4 md:space-y-0">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
@@ -57,11 +57,11 @@ const FeaturedProjects: React.FC = () => {
           />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 space-y-6 md:space-y-0">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group  bg-white dark:bg-neutral-800/50 rounded-md overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-neutral-700 hover:scale-[1.02]"
+            className="group  bg-white dark:bg-neutral-800/50 rounded-md overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-neutral-700 hover:scale-[1]"
           >
             <div className="relative overflow-hidden">
               <Image

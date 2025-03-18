@@ -157,7 +157,58 @@ const SkillsShowcase: React.FC = () => {
       : skills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section className="py-16 md:py-24 bg-light-background dark:bg-dark-background">
+    <>
+     <div className="relative">
+      {/* 🔷 SVG Line - Connecting from Previous Sections */}
+      <div className="absolute -left-[400px] -top-32 w-full h-[800px] pointer-events-none">
+        <svg
+          className="absolute w-full h-full"
+          viewBox="0 0 1000 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Main curved path */}
+          <path
+        d="M0,100 
+           H400
+           C500,100 500,100 500,200
+           C500,300 500,400 500,500"
+        stroke="url(#gradient)"
+        strokeWidth="2"
+        fill="transparent"
+          />
+          
+          
+
+          <defs>
+        <linearGradient id="gradient" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#4f46e5" />
+          <stop offset="100%" stopColor="#06b6d4" />
+        </linearGradient>
+          </defs>
+
+          {/* Animated circles at key points */}
+          <circle cx="400" cy="100" r="6" fill="#4f46e5">
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+          </circle>
+          <circle cx="500" cy="300" r="5" fill="#06b6d4">
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="2s"
+          repeatCount="indefinite"
+          begin="0.5s"
+        />
+          </circle>
+        </svg>
+      </div>
+      
+    <section className="py-16 md:py-24 bg-light-background dark:bg-dark-background ">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
           <span className="px-4 py-2 bg-light-primary dark:bg-dark-muted rounded-full text-sm font-medium text-light-foreground dark:text-dark-foreground inline-flex items-center justify-center mb-4">
@@ -181,7 +232,7 @@ const SkillsShowcase: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === "all"
                   ? "bg-light-accent dark:bg-dark-accent text-light-foreground dark:text-dark-background"
-                  : "text-light-foreground dark:text-dark-background hover:text-light-foreground dark:hover:text-dark-foreground"
+                  : "text-light-foreground dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
               }`}
             >
               All Skills
@@ -191,7 +242,7 @@ const SkillsShowcase: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === "frontend"
                   ? "bg-light-accent dark:bg-dark-accent text-light-foreground dark:text-dark-background"
-                  : "text-light-secondary dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
+                  : "text-light-foreground dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
               }`}
             >
               Frontend
@@ -201,7 +252,7 @@ const SkillsShowcase: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === "backend"
                   ? "bg-light-accent dark:bg-dark-accent text-light-foreground dark:text-dark-background"
-                  : "text-light-secondary dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
+                  : "text-light-foreground dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
               }`}
             >
               Backend
@@ -211,7 +262,7 @@ const SkillsShowcase: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === "tools"
                   ? "bg-light-accent dark:bg-dark-accent text-light-foreground dark:text-dark-background"
-                  : "text-light-secondary dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
+                  : "text-light-forground dark:text-dark-secondary hover:text-light-foreground dark:hover:text-dark-foreground"
               }`}
             >
               Tools
@@ -295,6 +346,8 @@ const SkillsShowcase: React.FC = () => {
         </div>
       </div>
     </section>
+    </div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@
 const About = () => {
   return (
     <section className="py-12 px-6 md:px-12 lg:px-24">
+      
       <div className="container max-w-6xl mx-auto p-4 md:p-12 rounded-2xl bg-white/80 dark:bg-neutral-900/90 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 shadow-lg">
         {/* About Text */}
         <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
