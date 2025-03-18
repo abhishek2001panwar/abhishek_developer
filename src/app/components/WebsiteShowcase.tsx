@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Monitor, Smartphone, Tablet, Laptop, ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image';
 
 interface WebsiteShowcaseProps {
   title: string;
@@ -37,7 +38,7 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">{title}</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-2">{title}</h2>
             <p className="text-light-secondary dark:text-dark-secondary text-lg mb-4">{description}</p>
           </div>
           
@@ -47,7 +48,7 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
                 href={liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-light-accent dark:bg-dark-accent text-light-foreground dark:text-dark-background font-medium rounded-full transition-transform hover:scale-105"
+                className="flex items-center gap-2 px-4 py-2 bg-light-accent dark:bg-dark-accent text-light-foreground dark:text-dark-background font-medium rounded-md transition-transform hover:scale-105"
               >
                 <ExternalLink size={18} />
                 Live Demo
@@ -58,7 +59,7 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
                 href={githubUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-light-muted dark:bg-dark-muted text-light-foreground dark:text-dark-foreground font-medium rounded-full transition-transform hover:scale-105"
+                className="flex items-center gap-2 px-4 py-2 bg-light-muted dark:bg-dark-muted text-light-foreground dark:text-dark-foreground font-medium rounded-md transition-transform hover:scale-105"
               >
                 <Github size={18} />
                 Code
@@ -103,8 +104,10 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
         
         {/* Website Preview */}
         <div className="flex justify-center mb-8">
-          <div className={`${getDeviceWidth()} aspect-video relative overflow-hidden rounded-md border border-light-muted dark:border-dark-muted bg-white dark:bg-black`}>
-            <img 
+          <div className={`${getDeviceWidth()} aspect-video object-cover relative overflow-hidden rounded-md border border-light-muted dark:border-dark-muted bg-white dark:bg-black`}>
+            <Image
+            width={1920}
+            height={1080} 
               src={imageUrl} 
               alt={`${title} preview`} 
               className="absolute inset-0 w-full h-full object-cover"
@@ -132,7 +135,7 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
               {technologies.map((tech, index) => (
                 <span 
                   key={index} 
-                  className="px-4 py-2 border border-gray-200 dark:border-neutral-700 bg-light-muted dark:bg-dark-muted rounded-md text-sm font-medium"
+                  className="px-4 py-1 border border-gray-200 dark:border-neutral-700 bg-light-muted dark:bg-dark-muted rounded-md text-sm font-medium"
                 >
                   {tech}
                 </span>

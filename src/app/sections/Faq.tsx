@@ -50,7 +50,7 @@ const Faq: React.FC = () => {
 
   return (
     
-    <div className="container mx-auto px-2  flex flex-col justify-center">
+    <div className="container mx-auto px-2  flex flex-col justify-center mb-32">
       <h2 className="text-4xl font-bold mb-2 text-center dark:text-dark-accent text-primary-600">Got Any Questions?</h2>
       <p className="text-lg mb-6 text-center dark:text-dark-secondary text-gray-600">We&apos;ve Got Answers.</p>
 

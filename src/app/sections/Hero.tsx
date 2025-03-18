@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { FaBehance, FaDribbble, FaFigma, FaGithub } from "react-icons/fa";
-import Button from "../Button";
+import {  FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Button from "../components/Button";
 
 interface HeroProps {
   name: string;
@@ -26,24 +26,32 @@ const Hero: React.FC<HeroProps> = ({ name, title, description, stats }) => {
 
         {/* Main Text Content */}
         <div className="max-w-3xl">
-          <h1 className="mb-6 sm:mb-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            {name} is an experienced designer 
-            who creates high-<span className="dark:text-dark-secondary">performing &
-            beautiful websites.
-            </span>
+          <h1 className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-foreground">
+            <span className="bg-gradient-to-r from-light-foreground to-dark-background dark:from-dark-accent dark:to-primary bg-clip-text text-transparent">
+              {name}
+            </span>{" "}
+            transforms ideas into 
+            <span className="relative">
+              <span className="dark:text-dark-secondary"> exceptional</span>
+              
+            </span> digital experiences
           </h1>
 
+          <p className="text-lg sm:text-xl mb-8 text-secondary">
+            {description}
+          </p>
+
           {/* Stats */}
-          <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12">
+          {/* <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12">
             {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col">
-                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">
-                  {stat.value}
-                </span>
-                <span className="text-xs sm:text-sm text-secondary">{stat.label}</span>
+              <div key={index} className="flex flex-col transform hover:scale-105 transition-transform duration-200">
+          <span className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-light-accent to-primary dark:from-dark-accent dark:to-primary bg-clip-text text-transparent">
+            {stat.value}
+          </span>
+          <span className="text-xs sm:text-sm text-secondary">{stat.label}</span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Action Buttons */}
@@ -65,22 +73,22 @@ const Hero: React.FC<HeroProps> = ({ name, title, description, stats }) => {
             <FaGithub className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
           <a
-            href="https://figma.com"
+            href="https://linkedin.com"
             className="text-primary hover:text-primary/80 transition"
           >
-            <FaFigma className="h-5 w-5 sm:h-6 sm:w-6" />
+            <FaLinkedin className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
           <a
-            href="https://dribbble.com"
+            href="https://instagram.com"
             className="text-primary hover:text-primary/80 transition"
           >
-            <FaDribbble className="h-5 w-5 sm:h-6 sm:w-6" />
+            <FaInstagram className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
           <a
-            href="https://behance.net"
+            href="https://twitter.com"
             className="text-primary hover:text-primary/80 transition"
           >
-            <FaBehance className="h-5 w-5 sm:h-6 sm:w-6" />
+            <FaTwitter className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
         </div>
       </div>

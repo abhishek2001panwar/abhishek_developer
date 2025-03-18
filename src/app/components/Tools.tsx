@@ -4,63 +4,65 @@ import {
   
   SiFigma, 
   SiFramer, 
-  SiWebflow, 
-  SiOpenai, 
-  SiNotion,
-  SiGoogleanalytics,
-  SiSlack,
-  SiAsana, 
-  SiLemonsqueezy
+  SiVercel,
+  SiDocker,
+  SiPostman,
+  SiGithub,
+  SiJest,
+  SiFirebase,
+  SiExpo
 } from 'react-icons/si';
 
 const Tools: React.FC = () => {
   const tools = [
     {
-      name: 'Lemon Squeezy',
-      description: 'Payment Gateway',
-      icon: <SiLemonsqueezy size={32} />,
+      name: "Vercel",
+      description: "Deploy and Host Next.js Apps",
+      icon: <SiVercel size={32} />,
     },
     {
-      name: 'Figma',
-      description: 'Design Tool',
+      name: "Docker",
+      description: "Containerization Platform",
+      icon: <SiDocker size={32} />,
+    },
+    {
+      name: "Postman",
+      description: "API Testing and Development",
+      icon: <SiPostman size={32} />,
+    },
+    {
+      name: "Git & GitHub",
+      description: "Version Control and Collaboration",
+      icon: <SiGithub size={32} />,
+    },
+    {
+      name: "Figma",
+      description: "UI/UX Design and Prototyping",
       icon: <SiFigma size={32} />,
     },
     {
-      name: 'Framer',
-      description: 'Web Design Platform',
+      name: "Jest",
+      description: "JavaScript Testing Framework",
+      icon: <SiJest size={32} />,
+    },
+    {
+      name: "Firebase",
+      description: "Auth, Database, and Cloud Functions",
+      icon: <SiFirebase size={32} />,
+    },
+    {
+      name: "Expo",
+      description: "React Native App Framework",
+      icon: <SiExpo size={32} />,
+    },
+    {
+      name: "Framer",
+      description: "Interactive Prototyping Tool",
       icon: <SiFramer size={32} />,
-    },
-    {
-      name: 'Webflow',
-      description: 'No-Code Website Builder',
-      icon: <SiWebflow size={32} />,
-    },
-    {
-      name: 'ChatGPT',
-      description: 'AI Assistant',
-      icon: <SiOpenai size={32} />,
-    },
-    {
-      name: 'Notion',
-      description: 'Productivity Tool',
-      icon: <SiNotion size={32} />,
-    },
-    {
-      name: 'Google Analytics',
-      description: 'Website Analytics',
-      icon: <SiGoogleanalytics size={32} />,
-    },
-    {
-      name: 'Slack',
-      description: 'Communication',
-      icon: <SiSlack size={32} />,
-    },
-    {
-      name: 'Asana',
-      description: 'Project Management',
-      icon: <SiAsana size={32} />,
-    },
+      
+    }
   ];
+  
 
   return (
     <div className="container max-w-6xl mx-auto p-8 mb-24 rounded-2xl bg-white/80 dark:bg-neutral-900/90 backdrop-blur-sm border border-gray-200 dark:border-neutral-700 shadow-xl">

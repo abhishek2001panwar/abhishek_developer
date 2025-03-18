@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 
-export default function SignupFormDemo() {
+export default function HireMe() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");

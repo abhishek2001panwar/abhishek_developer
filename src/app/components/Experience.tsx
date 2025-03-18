@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { Timeline } from "../ui/timeline";
+import { Timeline } from "./ui/timeline";
 
-export default function Exp() {
+export default function Experience() {
   const data = [
     {
       title: "2024",

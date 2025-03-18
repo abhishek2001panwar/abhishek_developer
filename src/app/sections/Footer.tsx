@@ -1,6 +1,6 @@
 // Footer.tsx
 import React from "react";
-import Button from "./Button";
+import Button from "../components/Button";
 
 const Footer: React.FC = () => {
   return (
@@ -120,10 +120,10 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 mt-52 max-w-6xl">
         <div className="bg-white dark:bg-neutral-800 rounded-xl p-7 flex justify-between items-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-neutral-700 hover:scale-[1.02]">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © Kartik 2024. All Rights Reserved.
+            © Abhishek 2025. All Rights Reserved.
           </p>
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Designed by Designflow Agency
+            Designed by Abhishek
           </p>
         </div>
       </div>

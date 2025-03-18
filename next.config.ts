@@ -5,6 +5,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off', // Example rule to disable
   },
   images: {
-    domains: ['images.unsplash.com' ,'assets.aceternity.com' ,'plus.unsplash.com'], // Add allowed image domains here
+    domains: ['images.unsplash.com' ,'assets.aceternity.com' ,'plus.unsplash.com' , 'a.storyblok.com'], // Add allowed image domains here
   },
 };

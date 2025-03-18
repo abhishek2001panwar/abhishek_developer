@@ -5,15 +5,16 @@
 ::-webkit-scrollbar{
     width: 5px;
     height: 5px;
+    
 }
 
-/* ::-webkit-scrollbar-thumb{
-    background-color: #4B5563;
+::-webkit-scrollbar-thumb{
+    background-color: #787e86;
     border-radius: 10px;
     height: 5px;
-} */
+}
 
 
 *{
-    font-family: "Gilroy" ;
+    font-family: "Poppins";
 }
