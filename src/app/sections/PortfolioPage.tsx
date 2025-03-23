@@ -14,7 +14,10 @@ export default function PortfolioPage() {
         <WebsiteShowcase
           title="Expo-Ape App"
           description="Global digital design studio crafting immersive brand experiences."
-          imageUrl="/ExpoApe.png"
+          images={{
+            laptop: "/ExpoApe.png",
+            mobile: "/ExpoApe-mobile.png"
+          }}
           technologies={[
             "React",
             "Next.js",
@@ -36,7 +39,10 @@ export default function PortfolioPage() {
         <WebsiteShowcase
           title="Cuberto Design"
           description="A modern and responsive landing page for a Design Agency."
-          imageUrl="/cuberto.png"
+          images={{
+            laptop: "/cuberto.png",
+            mobile: "/cuberto-mobile.png"
+          }}
           technologies={[
             "React",
             "Next.js",
@@ -60,7 +66,10 @@ export default function PortfolioPage() {
         <WebsiteShowcase
           title="Sustainability Initiative"
           description="A modern and eco-conscious website promoting sustainability and green practices."
-          imageUrl="/sustain.png"
+          images={{
+            laptop: "/sustain.png",
+            mobile: "/sustain-mobile.png"
+          }}
           technologies={[
             "React",
             "Next.js",

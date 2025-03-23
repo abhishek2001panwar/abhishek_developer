@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { Monitor, Smartphone, Tablet, Laptop, ExternalLink, Github } from 'lucide-react';
+import { Smartphone, Laptop, ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
 
 interface WebsiteShowcaseProps {
   title: string;
   description: string;
-  imageUrl: string;
+  images: {
+    laptop: string;
+    mobile: string;
+  };
   technologies: string[];
   features: string[];
   liveUrl?: string;
@@ -15,25 +18,41 @@ interface WebsiteShowcaseProps {
 const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
   title,
   description,
-  imageUrl,
+  images,
   technologies,
   features,
   liveUrl,
   githubUrl
 }) => {
-  const [deviceView, setDeviceView] = useState<'desktop' | 'tablet' | 'mobile' | 'laptop'>('desktop');
+  const [deviceView, setDeviceView] = useState<'laptop' | 'mobile'>('laptop');
 
-  const getDeviceWidth = () => {
+  const getDeviceStyles = () => {
     switch (deviceView) {
-      case 'mobile': return 'w-64';
-      case 'tablet': return 'w-96';
-      case 'laptop': return 'w-3/5';
-      default: return 'w-full';
+      case 'mobile':
+        return {
+          width: 'w-64',
+          aspectRatio: 'aspect-[9/16]',
+          border: 'border-8 rounded-3xl',
+          extraClass: 'before:content-[""] before:absolute before:top-0 before:w-16 before:h-1 before:bg-gray-300 before:rounded-full before:left-1/2 before:-translate-x-1/2 before:mt-4'
+        };
+      default: // laptop
+        return {
+          width: 'w-3/5',
+          aspectRatio: 'aspect-video',
+          border: 'border-t-8 border-x-8 border-b-16 rounded-md',
+          extraClass: 'shadow-lg'
+        };
     }
   };
 
+  const getCurrentImage = () => {
+    return images[deviceView];
+  };
+
+  const styles = getDeviceStyles();
+
   return (
-    <section className=" border border-gray-200 dark:border-neutral-700 bg-light-background dark:bg-dark-muted text-light-foreground dark:text-dark-foreground rounded-md shadow-sm overflow-hidden max-w-6xl mx-auto my-16">
+    <section className="border border-gray-200 dark:border-neutral-700 bg-light-background dark:bg-dark-muted text-light-foreground dark:text-dark-foreground rounded-md shadow-sm overflow-hidden max-w-6xl mx-auto my-16">
       <div className="p-6 md:p-7">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -70,27 +89,13 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
         
         {/* Device Switcher */}
         <div className="mb-8 flex justify-center">
-          <div className="inline-flex bg-light-muted dark:bg-dark-muted  p-1 rounded-full">
-            <button 
-              onClick={() => setDeviceView('desktop')}
-              className={`p-2 rounded-full ${deviceView === 'desktop' ? 'text-dark-background bg-light-accent dark:bg-dark-accent' : ''}`}
-              aria-label="Show desktop view"
-            >
-              <Monitor size={20} />
-            </button>
+          <div className="inline-flex bg-light-muted dark:bg-dark-muted p-1 rounded-full">
             <button 
               onClick={() => setDeviceView('laptop')}
               className={`p-2 rounded-full ${deviceView === 'laptop' ? 'text-dark-background bg-light-accent dark:bg-dark-accent' : ''}`}
               aria-label="Show laptop view"
             >
               <Laptop size={20} />
-            </button>
-            <button 
-              onClick={() => setDeviceView('tablet')}
-              className={`p-2 rounded-full ${deviceView === 'tablet' ? 'text-dark-background bg-light-accent dark:bg-dark-accent' : ''}`}
-              aria-label="Show tablet view"
-            >
-              <Tablet size={20} />
             </button>
             <button 
               onClick={() => setDeviceView('mobile')}
@@ -104,13 +109,13 @@ const WebsiteShowcase: React.FC<WebsiteShowcaseProps> = ({
         
         {/* Website Preview */}
         <div className="flex justify-center mb-8">
-          <div className={`${getDeviceWidth()} aspect-video   relative overflow-hidden rounded-md border border-light-muted dark:border-dark-muted bg-white dark:bg-black`}>
+          <div className={`${styles.width} ${styles.aspectRatio}  relative overflow-hidden ${styles.border} border-light-muted dark:border-dark-muted bg-white dark:bg-black ${styles.extraClass}`}>
             <Image
-            width={2000}
-            height={1080} 
-              src={imageUrl} 
-              alt={`${title} preview`} 
-              className="absolute inset-0 w-full h-full object-cover"
+              width={2000}
+              height={1180} 
+              src={getCurrentImage()} 
+              alt={`${title} preview on ${deviceView}`} 
+              className="absolute  inset-0 w-full h-full object-cover rounded-md"
             />
           </div>
         </div>

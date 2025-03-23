@@ -7,35 +7,44 @@ import Link from "next/link";
 const FeaturedProjects: React.FC = () => {
   const projects = [
     {
-      title: "QuickBuy (E-Commerce Platform)",
+      title: "QuickBuy",
       image:
-        "https://plus.unsplash.com/premium_photo-1681488350342-19084ba8e224?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww", // Replace with your actual image path
+        "https://plus.unsplash.com/premium_photo-1681488350342-19084ba8e224?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww",
       category: "Full-Stack",
       category2: "E-Commerce",
+      description:
+        "A comprehensive e-commerce platform built with Next.js and Node.js. Features include user authentication, product management, shopping cart functionality, and secure payment integration with Stripe.",
       link: "https://github.com/abhishek2001panwar/QuickBuy",
     },
     {
       title: "Connectify Job Portal",
       image:
-        "https://images.unsplash.com/photo-1653566031535-bcf33e1c2893?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8am9iJTIwcG9ydGFsfGVufDB8fDB8fHww", // Replace with your actual image path
+        "https://images.unsplash.com/photo-1653566031535-bcf33e1c2893?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8am9iJTIwcG9ydGFsfGVufDB8fDB8fHww",
       category: "Web2",
       category2: "Job Portal",
+      description:
+        "A modern job portal connecting employers and job seekers. Built with React and mern stack, featuring real-time job listings, application tracking, and advanced search functionality.",
       link: "https://github.com/abhishek2001panwar/codsoft",
     },
     {
       title: "Peer-to-Peer Communication",
       image:
-        "https://plus.unsplash.com/premium_photo-1682309671884-6b4cc375b376?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVlciUyMHRvJTIwcGVlcnxlbnwwfHwwfHx8MA%3D%3D", // Replace with your actual image path
+        "https://plus.unsplash.com/premium_photo-1682309671884-6b4cc375b376?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVlciUyMHRvJTIwcGVlcnxlbnwwfHwwfHx8MA%3D%3D",
       category: "RTC",
       category2: "WebRTC",
+      description:
+        "Real-time communication platform using WebRTC technology. Enables direct peer-to-peer video calls, chat, and file sharing with end-to-end encryption and low latency.",
       link: "https://github.com/abhishek2001panwar/Peer2Peer",
     },
     {
       title: "CodeFlow",
       image:
-        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with your image path
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D",
       category: "Development",
-      link: "#", // Replace with your project link
+      category2: "IDE",
+      description:
+        "An online code editor and collaboration platform. Features include real-time code sharing, syntax highlighting, multiple programming language support, and integrated terminal.",
+      link: "#",
     },
   ];
 
@@ -57,48 +66,55 @@ const FeaturedProjects: React.FC = () => {
           />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 space-y-6 md:space-y-0">
+      <div className="space-y-12 relative">
         {projects.map((project, index) => (
-          <div
+          <article
             key={index}
-            className="group  bg-white dark:bg-neutral-800/50 rounded-md overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-neutral-700 hover:scale-[1]"
+            className="relative flex flex-col md:flex-row items-center gap-8 p-2 md:p-8 bg-light-background/80 dark:bg-dark-muted rounded-xl backdrop-blur-sm border border-light-muted dark:border-dark-muted shadow-sm"
           >
-            <div className="relative overflow-hidden">
+            {/* Rest of the article content */}
+            <div className="flex-1 space-y-4 p-2">
+              <header className="flex items-center gap-4">
+                <span className="flex items-center justify-center w-12 h-12 rounded-full border border-light-accent dark:border-dark-accent/50 text-light-foreground dark:text-dark-foreground font-bold text-lg">
+                  {index + 1}
+                </span>
+                <h3 className="text-2xl font-bold text-light-foreground dark:text-dark-foreground">
+                  {project.title}
+                </h3>
+              </header>
+
+              <p className="text-light-secondary dark:text-dark-secondary mt-4 leading-relaxed border-l-4 border-light-accent dark:border-dark-accent pl-4">
+                {project.description}
+              </p>
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="border border-light-accent/30 dark:border-dark-accent/30 text-light-foreground dark:text-dark-foreground px-4 py-2 rounded-md text-sm font-medium">
+                  {project.category}
+                </span>
+                {project.category2 && (
+                  <span className="border border-light-accent/30 dark:border-dark-accent/30 text-light-foreground dark:text-dark-foreground px-4 py-2 rounded-md text-sm font-medium">
+                    {project.category2}
+                  </span>
+                )}
+              </div>
+              <div className="h-1 w-16 bg-light-accent dark:bg-dark-accent mt-6 rounded-full"></div>
+              <a
+                href={project.link}
+                className="inline-flex items-center text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent transition-colors"
+              >
+                View Project
+                <span className="ml-2 text-xl">→</span>
+              </a>
+            </div>
+
+            <figure className="w-full md:w-1/3 h-56 relative">
               <Image
-                width={700}
-                height={500}
                 src={project.image}
                 alt={project.title}
-                className="w-full h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                fill
+                className="object-cover rounded-xl shadow-md"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-medium mb-2 text-gray-900 dark:text-white">
-                {project.title}
-              </h3>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <span className="bg-gray-100 dark:bg-neutral-700 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">
-                    {project.category}
-                  </span>
-                  {project.category2 && (
-                    <span className="bg-gray-100 dark:bg-neutral-700 text-gray-700 dark:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">
-                      {project.category2}
-                    </span>
-                  )}
-                </div>
-                <a
-                  href={project.link}
-                  className="border border-gray-100 dark:border-neutral-700   flex items-center justify-center dark:border-accent-400 bg-accent-500/10 hover:bg-accent-500 dark:hover:bg-accent-400 text-accent-500 hover:text-white dark:text-accent-400 dark:hover:text-white px-4 py-2 rounded-md transition-all duration-300 "
-                >
-                  <span className="transform group-hover:translate-x-2 transition-transform duration-300 ">
-                    →
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
+            </figure>
+          </article>
         ))}
       </div>
     </div>
