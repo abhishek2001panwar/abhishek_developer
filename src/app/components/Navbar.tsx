@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed left-1/2 -translate-x-1/2 top-2 z-50 w-full max-w-7xl mx-auto px-4 ">
       <div className="rounded-md shadow-sm border border-light-secondary/30 dark:border-dark-secondary/30 bg-light-background/60 dark:bg-dark-background/60 backdrop-blur-md text-light-foreground dark:text-dark-foreground transition-colors duration-300">
-        <div className="flex items-center justify-between py-5 px-4">
+        <div className="flex items-center justify-between py-3.5 px-5">
           
           {/* Logo */}
           <div className="text-2xl font-medium tracking-tight text-light-foreground dark:text-dark-foreground">Abhishek</div>
