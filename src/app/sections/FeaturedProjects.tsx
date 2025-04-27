@@ -83,7 +83,7 @@ const FeaturedProjects: React.FC = () => {
                 </h3>
               </header>
 
-              <p className="text-light-secondary dark:text-dark-secondary mt-4 leading-relaxed border-l-4 border-light-accent dark:border-dark-accent pl-4">
+              <p className="text-light-secondary dark:text-dark-secondary mt-4 leading-relaxed border-l-2 border-light-accent dark:border-dark-accent pl-4">
                 {project.description}
               </p>
               <div className="flex items-center gap-3 flex-wrap">
@@ -96,7 +96,7 @@ const FeaturedProjects: React.FC = () => {
                   </span>
                 )}
               </div>
-              <div className="h-1 w-16 bg-light-accent dark:bg-dark-accent mt-6 rounded-full"></div>
+              {/* <div className="h-1 w-16 bg-light-accent dark:bg-dark-accent mt-6 rounded-full"></div> */}
               <a
                 href={project.link}
                 className="inline-flex items-center text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent transition-colors"

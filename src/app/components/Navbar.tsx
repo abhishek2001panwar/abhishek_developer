@@ -17,9 +17,9 @@ const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:items-center md:space-x-10 font-regular">
             <a href="#" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">Home</a>
-            <a href="#" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">About</a>
-            <a href="#" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">Projects</a>
-            <a href="#" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">Services</a>
+            <a href="#about" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">About</a>
+            <a href="#projects" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">Projects</a>
+            <a href="#skills" className="text-light-foreground dark:text-dark-foreground hover:text-light-accent dark:hover:text-dark-accent text-sm font-normal transition">Services</a>
           </nav>
 
           {/* Right Side Items */}

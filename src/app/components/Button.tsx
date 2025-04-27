@@ -5,6 +5,7 @@ interface ButtonProps {
   label: string;
   className?: string;
   variant?: 'primary' | 'secondary'; // Add variant prop for different styles
+  onClick?: () => void; // Optional onClick handler
 }
 
 const Button: React.FC<ButtonProps> = ({ 

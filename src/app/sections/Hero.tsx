@@ -57,12 +57,21 @@ const Hero: React.FC<HeroProps> = ({ name, title, description, stats }) => {
 
         {/* Action Buttons */}
         <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <Button label="Hire Me Now" className="py-2.5 sm:py-3 px-4 sm:px-6 w-full sm:w-auto" />
-          <Button
-            label="See My Work"
-            className="py-2.5 sm:py-3 px-4 sm:px-6 w-full sm:w-auto"
-            variant="secondary"
-          />
+        <a href="#contact">
+  <Button 
+    label="Hire Me Now" 
+    className="py-2.5 sm:py-3 px-4 sm:px-6 w-full sm:w-auto" 
+  />
+</a>
+
+<a href="#portfolio">
+  <Button 
+    label="See My Work" 
+    className="py-2.5 sm:py-3 px-4 sm:px-6 w-full sm:w-auto" 
+    variant="secondary" 
+  />
+</a>
+
         </div>
 
         {/* Social Links */}
@@ -95,7 +104,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, description, stats }) => {
       </div>
     </section>
     {/* Curved Line Connecting Hero to About */}
-    <div className="absolute md:left-[-1px] top-[200px] w-2 xl:w-[400px] h-[2900px] pointer-events-none">
+    <div className="absolute md:left-[20px] top-[200px] w-2 xl:w-[400px] h-[2900px] pointer-events-none">
       <svg
       className="absolute w-full h-full"
       viewBox="0 130 100 1500"

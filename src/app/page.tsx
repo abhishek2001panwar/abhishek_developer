@@ -13,6 +13,8 @@ import PortfolioPage from "./sections/PortfolioPage";
 import SkillsShowcase from "./sections/SkillsShowcase";
 import Experience from "./components/Experience";
 import PricingSection from "./sections/PricingSection";
+import LocomotiveScroll from 'locomotive-scroll';
+
 
 function page() {
   const heroData = {
@@ -27,19 +29,47 @@ function page() {
     ],
   };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const scroll = new LocomotiveScroll();
+
   return (
     <main>
       <Navbar />
       <Hero {...heroData} />
-      <About />
-      <PortfolioPage />
-      <Experience />
-      <Skills />
-      <FeaturedProjects />
-      <SkillsShowcase />
-      <Faq />
-      <PricingSection />
-      <Footer />
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="portfolio">
+        <PortfolioPage />
+      </section>
+
+      <section id="experience">
+        <Experience />
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="projects">
+        <FeaturedProjects />
+      </section>
+
+      <section id="skills-showcase">
+        <SkillsShowcase />
+      </section>
+
+      <section id="faq">
+        <Faq />
+      </section>
+
+      <section id="pricing">
+        <PricingSection />
+      </section>
+      <section id="contact">
+        <Footer />
+      </section>
     </main>
   );
 }
