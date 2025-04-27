@@ -13,7 +13,6 @@ import PortfolioPage from "./sections/PortfolioPage";
 import SkillsShowcase from "./sections/SkillsShowcase";
 import Experience from "./components/Experience";
 import PricingSection from "./sections/PricingSection";
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 function page() {
@@ -29,8 +28,6 @@ function page() {
     ],
   };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const scroll = new LocomotiveScroll();
 
   return (
     <main>
